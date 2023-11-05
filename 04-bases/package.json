@@ -7,7 +7,10 @@
 		"build": "ng build",
 		"watch": "ng build --watch --configuration development",
 		"test": "ng test",
-		"dev": "npm run ng serve -- --host=0.0.0.0 --disable-host-check"
+		"dev": "npm run ng serve -- --host=0.0.0.0 --disable-host-check",
+		"clear:docs": "rm -rf ../docs/*",
+		"move:docs": "mv dist/bases/* ../docs/",
+		"build:github": "npm run clear:docs && ng build --base-href ./ --configuration=production && npm run move:docs"
 	},
 	"private": true,
 	"dependencies": {
