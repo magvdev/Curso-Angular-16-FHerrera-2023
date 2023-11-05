@@ -4,12 +4,12 @@
   <div class="col">
     <dbz-list-characters
       [characterList]="characters"
-      (onDeleteCharacter)="deleteCharacter($event)"
+      (onDeleteCharacterById)="onDeleteCharacterById($event)"
     ></dbz-list-characters>
   </div>
   <div class="col">
     <dbz-add-character
-      (onNewCharacter)="addNewCharacter($event)"
+      (onNewCharacter)="onNewCharacter($event)"
     ></dbz-add-character>
   </div>
 </div>

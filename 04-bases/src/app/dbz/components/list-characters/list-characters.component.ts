@@ -4,13 +4,14 @@ import { Character } from '../../interfaces/character.interface';
 @Component({
   selector: 'dbz-list-characters',
   templateUrl: './list-characters.component.html',
-  styleUrls: ['./list-characters.component.css']
+  styleUrls: ['./list-characters.component.css'],
 })
-export class ListCharactersComponent {	
-	@Input({required : true}) public characterList: Character[] = [];
-	@Output() public onDeleteCharacter: EventEmitter<number> = new EventEmitter();
+export class ListCharactersComponent {
+  @Input({ required: true }) public characterList: Character[] = [];
+  @Output() public onDeleteCharacterById: EventEmitter<string> =
+    new EventEmitter();
 
-	deleteCharacter(index: number): void {
-		this.onDeleteCharacter.emit(index);
-	}
+  deleteCharacterById(id: string): void {
+    this.onDeleteCharacterById.emit(id);
+  }
 }

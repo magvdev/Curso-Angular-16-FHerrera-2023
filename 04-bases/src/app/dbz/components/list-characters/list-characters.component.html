@@ -14,10 +14,13 @@
   >
     <div>
       <span class="text-primary">{{ i + 1 }}. </span>
+      <span>{{ character.id }} - </span>
       <span>{{ character.name }} - </span>
       <strong>Power: </strong>
       <span class="text-danger">{{ character.power }}</span>
     </div>
-    <button class="btn btn-danger" (click)="deleteCharacter(i)">X</button>
+    <button class="btn btn-danger" (click)="deleteCharacterById(character.id)">
+      X
+    </button>
   </li>
 </ul>
