@@ -23,7 +23,8 @@
 			"extensions": [
 				"Angular.ng-template",
 				"esbenp.prettier-vscode",
-				"rvest.vs-code-prettier-eslint"
+				"rvest.vs-code-prettier-eslint",
+				"Zignd.html-css-class-completion"
 			]
 		}
 	},
