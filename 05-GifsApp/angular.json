@@ -60,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "gifs-app:build:production"
+              "buildTarget": "gifs-app:build:production"
             },
             "development": {
-              "browserTarget": "gifs-app:build:development"
+              "buildTarget": "gifs-app:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "gifs-app:build"
+            "buildTarget": "gifs-app:build"
           }
         },
         "test": {
