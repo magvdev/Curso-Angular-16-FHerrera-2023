@@ -8,6 +8,6 @@ import { Gif } from '../../interfaces/giphyResponse.interface';
 })
 export class CardListComponent {
 
-	@Input({required: true}) gifs: Gif[] = [];
+	@Input({ required: true }) gifs: Gif[] = [];
 
 }

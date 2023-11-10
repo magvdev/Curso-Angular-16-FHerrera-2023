@@ -1,17 +1,5 @@
 <div class="row">
   @for (gif of gifs; track gif.id) {
-  <div class="col-md-3 col-sm6">
-    <div class="card mb-2 text-center bg-dark">
-      <img
-        [src]="gif.images.downsized_medium.url"
-        class="card-img-top"
-        [alt]="gif.title"
-      />
-
-      <div class="card-body text-white">
-        <p class="card-text">{{ gif.title }}</p>
-      </div>
-    </div>
-  </div>
+  <app-gif-card [gif]="gif" class="col-md-3 col-sm6"></app-gif-card>
   }
 </div>
