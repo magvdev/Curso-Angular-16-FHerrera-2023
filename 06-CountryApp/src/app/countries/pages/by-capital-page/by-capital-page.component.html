@@ -1,1 +1,20 @@
-<p>by-capital-page works!</p>
+<h2>By Capital</h2>
+<hr />
+<div class="row">
+  <div class="col">
+    <app-search-box
+      placeholder="Search..."
+      (onSearchText)="searchByCapital($event)"
+    ></app-search-box>
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    <hr />
+    <ul>
+      @for (country of countriesList; track $index) {
+      <li>{{ country.capital }} - {{ country.population | number }}</li>
+      }
+    </ul>
+  </div>
+</div>

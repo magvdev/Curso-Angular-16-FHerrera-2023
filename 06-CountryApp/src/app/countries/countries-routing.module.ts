@@ -23,6 +23,10 @@ const routes: Routes = [
     path: 'country/:id',
     component: CountryPageComponent,
   },
+  {
+    path: '**',
+    redirectTo: 'by-capital',
+  },
 ];
 
 @NgModule({
