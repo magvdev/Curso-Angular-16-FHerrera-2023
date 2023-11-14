@@ -1,0 +1,35 @@
+@if (countries.length === 0) {
+<div class="alert alert-warning text-center">No Countries found</div>
+} @else {
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th class="text-center">Icon</th>
+      <th>Flag</th>
+      <th>Name</th>
+      <th>Capital</th>
+      <th>Population</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (country of countries; track country.name) {
+    <tr>
+      <td class="text-center">{{ country.flag }}</td>
+      <td>
+        <img
+          [src]="country.flags.svg"
+          alt="flag"
+          class="img-fluid"
+          width="50"
+        />
+      </td>
+      <td>{{ country.name.common }}</td>
+      <td>{{ country.capital }}</td>
+      <td>{{ country.population | number }}</td>
+      <td>More...</td>
+    </tr>
+    }
+  </tbody>
+</table>
+}

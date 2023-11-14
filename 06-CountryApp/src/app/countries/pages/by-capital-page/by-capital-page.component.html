@@ -11,10 +11,6 @@
 <div class="row">
   <div class="col">
     <hr />
-    <ul>
-      @for (country of countriesList; track $index) {
-      <li>{{ country.capital }} - {{ country.population | number }}</li>
-      }
-    </ul>
+    <app-country-table [countries]="countriesList"></app-country-table>
   </div>
 </div>

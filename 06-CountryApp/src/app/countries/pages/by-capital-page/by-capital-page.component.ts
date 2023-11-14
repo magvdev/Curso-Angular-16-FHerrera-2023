@@ -15,7 +15,6 @@ export class ByCapitalPageComponent {
 
 	searchByCapital(searchText: string): void {
 		this.countriesService.searchByCapital(searchText).subscribe((countries: Country[]) => {
-			console.log('ByCapitalPageComponent-countries :>> ', countries);
 			this.countriesList = countries;
 		});
 	}
