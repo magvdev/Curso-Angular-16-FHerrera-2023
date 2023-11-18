@@ -1,11 +1,23 @@
 <h2>By Region</h2>
 <hr />
+@if (loading) {
+<app-loader></app-loader>
+}
 <div class="row">
-  <div class="col">
-    <app-search-box
-      placeholder="Search..."
-      (onSearchText)="searchByRegion($event)"
-    ></app-search-box>
+  <div class="col text-center">
+    @for (region of regions; track region) {
+    <button
+      type="button"
+      class="btn mx-2"
+      [ngClass]="{
+        'btn-primary': region === selectedRegion,
+        'btn-outline-primary': region !== selectedRegion
+      }"
+      (click)="searchByRegion(region)"
+    >
+      {{ region | titlecase }}
+    </button>
+    }
   </div>
 </div>
 <div class="row">

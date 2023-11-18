@@ -27,7 +27,9 @@
       <td>{{ country.name.common }}</td>
       <td>{{ country.capital }}</td>
       <td>{{ country.population | number }}</td>
-      <td>More...</td>
+      <td>
+        <a [routerLink]="['/countries/country/', country.cca3]">More...</a>
+      </td>
     </tr>
     }
   </tbody>
