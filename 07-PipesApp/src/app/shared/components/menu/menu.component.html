@@ -1,0 +1,23 @@
+<mat-toolbar color="primary">
+  @for (menuItem of menuItems; track menuItem.label) {
+  <button mat-button [matMenuTriggerFor]="menu">
+    @if (menuItem.icon){
+    <mat-icon>{{ menuItem.icon }}</mat-icon>
+    }
+    {{ menuItem.label }}
+  </button>
+  <mat-menu #menu="matMenu">
+    @for (subMenuItem of menuItem.subItems; track subMenuItem.label) {
+    <button mat-menu-item [disableRipple]="subMenuItem.disabled">
+      @if (subMenuItem.icon){
+      <mat-icon>{{ subMenuItem.icon }}</mat-icon>
+      } @if (subMenuItem.url) {
+      <span [routerLink]="[subMenuItem.url]">{{ subMenuItem.label }}</span>
+      } @else {
+      <span>{{ subMenuItem.label }}</span>
+      }
+    </button>
+    }
+  </mat-menu>
+  }
+</mat-toolbar>

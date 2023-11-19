@@ -1,0 +1,43 @@
+<mat-card class="p-1">
+  <mat-card-header>
+    <mat-card-title>Pipes Básicos</mat-card-title>
+    <mat-card-subtitle>
+      Pipes incluidos en Angular - Common Module
+    </mat-card-subtitle>
+  </mat-card-header>
+  <!-- <mat-divider></mat-divider> -->
+  <mat-card-content>
+    <div class="grid">
+      <div class="col-12 md:col-6">
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>uppercase</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            {{ nameLower | uppercase }}
+          </mat-card-content>
+        </mat-card>
+      </div>
+      <div class="col-12 md:col-6">
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>lowercase</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            {{ nameUpper | lowercase }}
+          </mat-card-content>
+        </mat-card>
+      </div>
+      <div class="col-12 md:col-6">
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>titlecase</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            {{ nameComplete | titlecase }}
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>
